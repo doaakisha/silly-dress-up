@@ -30,6 +30,24 @@
             height: auto;
         }
 
+        /* Play Button Styles */
+        .play-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            animation: bounceButton 1s infinite alternate; /* Bounce animation */
+        }
+
+        .play-button img {
+            width: 150px; /*Size of the play button */
+            height: auto;
+            transition: transform 0.3s ease; /* Smooth scaling on hover */
+        }
+
+        .play-button:hover img {
+            transform: scale(1.1); /* Make the button slightly bigger on hover */
+        }
+
         /* Define the animation */
         @keyframes moveTitle {
             0% {
@@ -45,6 +63,17 @@
                 opacity: 0.8;
             }
         }
+        /* Define the button bounce animation */
+        @keyframes bounceButton {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
     </style>
 </head>
 <body>
