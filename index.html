@@ -35,15 +35,15 @@
             background: none;
             border: none;
             cursor: pointer;
-            position: absolute; /*Position it relative to the screen */
-            top: 60%; /*Adjust this value to move the button lower */
-            left: 100;
-            transform: translateX(-50%); /* Centers to button horizontally */
+            position: absolute; /* Position it relative to the screen */
+            top: 60%; /* Adjust this value to move the button lower */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Centers the button horizontally */
             animation: bounceButton 1s infinite alternate; /* Bounce animation */
         }
 
         .play-button img {
-            width: 300px; /*Size of the play button */
+            width: 300px; /* Size of the play button */
             height: auto;
             transition: transform 0.3s ease; /* Smooth scaling on hover */
         }
@@ -59,7 +59,7 @@
                 opacity: 0.8;
             }
             50% {
-                transform: translateX(30px); /* Move to the right */
+            transform: translateX(30px); /* Move to the right */
                 opacity: 1; /* Fade in */
             }
             100% {
@@ -67,6 +67,7 @@
                 opacity: 0.8;
             }
         }
+
         /* Define the button bounce animation */
         @keyframes bounceButton {
             0% {
@@ -78,15 +79,16 @@
             100% {
                 transform: translateY(0);
             }
+        }
     </style>
 </head>
 <body>
 
     <!-- Background Music -->
     <audio id="background-music" loop autoplay>
-        <source src="relaxed-scene.mp3" type="audio/mp3>
-            Your browser does not support to audio element.
-            </audio>
+        <source src="relaxed-scene.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
             
     <!-- Title Image -->
     <div class="menu-title">
