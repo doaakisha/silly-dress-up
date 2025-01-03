@@ -3,16 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title> <!-- Tata date -->
+    <title>Game Menu</title>
     <style>
         body {
             background: url('background-img.PNG') no-repeat center center;
             background-size: cover;
-            margin: 0;
             height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Title Styles */
+        .menu-title {
+            position: absolute;
+            top: 20%;  /* Adjust the vertical position */
+            animation: moveTitle 5s infinite alternate; /* Animation for movement */
+        }
+
+        .menu-title img {
+            width: 300px;  /* Adjust the size */
+            height: auto;
+        }
+
+        /* Define the animation */
+        @keyframes moveTitle {
+            0% {
+                transform: translateX(0); /* Start position */
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateX(30px); /* Move to the right */
+                opacity: 1; /* Fade in */
+            }
+            100% {
+                transform: translateX(-30px); /* Move to the left */
+                opacity: 0.8;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Title Image -->
+    <div class="menu-title">
+        <img src="title.png" alt="Game Title">
+    </div>
+
+    <!-- Play Button (Optional) -->
+    <button class="menu-button" onclick="startGame()">
+        <img src="play-button.png" alt="Play">
+    </button>
+
+    <script>
+        function startGame() {
+            alert("Starting game...");
+        }
+    </script>
 </body>
 </html>
